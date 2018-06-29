@@ -1,67 +1,70 @@
-# capture cc number
 
-card_number = "5541801923795240"
+# Questions
 
-convert_cc_number = card_number.to_i
-# Reverse the CC Number
-# p convert_cc_number.digits
+1. What are you proud of?
+I think that I have improved my understanding of methods and their function.   
 
-reverse_digits = convert_cc_number.digits
-# take and array of numbers
-#
-# store the index of each numbers
+1. What do you need to improve?
+syntax, file organization, interpreting error messages, understanding/linking arguments from method to method.
 
-double_array = []
+1. What questions do you still have?
+how to properly link arguments to methods?
+how to approach error messages?
 
-# step one - double every other digit
+# Rubric
 
-double_array << reverse_digits
+## Functionality
 
-take2_array = []
+Notes:  My test provides error messages, but my program produces the expected return
 
-# iterate through the array and if the index is even, double the numbers
-# as we iterate, if index is even then the multiply the return/store number by 2
+- [X] Student completes through Iteration 3
 
-reverse_digits.each.with_index do |digit, index|
+## Mechanics - 2
 
-  if index.odd?
+Notes: I need to work on hashes and connecting methods, arguments within a class.  
 
-    take2_array << digit * 2
+The student(s):
 
-  else
+- [ ] appropriately uses Strings, Integers, Floats, Ranges, Symbols, Nils, Arrays, and Hashes
+- [ ] implements best-choice enumerable methods to iterate over collections
+- [ ] uses boolean expressions and flow control structures to logically manage a program's flow
+- [ ] uses methods, arguments, and return values to break code into logical components
+- [ ] creates Classes that utilize instance variables, attribute accessors, and instance methods
 
-    take2_array << digit
+## Design - 3
 
-  end
-end
+Notes:
 
-p take2_array
+The student(s):
 
-divided_array = []
+- [ ] adheres to the Single Responsibility and DRY principles
+- [ ] creates Objects and Classes that appropriately encompass state and behavior
+- [X] uses instance and local variables appropriately
+- [X] writes readable code with the following characteristics:
+    * Variable and method names are self explanatory
+    * Methods are under 7 lines
+    * Lines of code are under 80 characters
+    * Project directory structure adheres to convention
+    * A linter reports less than 5 errors
 
-take2_array.each.with_index do |digit, index|
+## Testing - 2
 
-  if digit > 9
+Notes: My test provides error messages, but my program produces the expected return
 
-    divided_array << digit - 9
-  else
+The student(s):
 
-    divided_array << digit
-  # divided_array << digit.digits
-  end
+- [X] writes Minitest tests that describe the expected behavior of a program according to technical specifications
+- [X] names and orders tests so that a test file reads like documentation
+- [ ] writes Minitest assertions that accurately test a piece of functionality
+- [ ] writes a test before writing code that implements the behavior to make that test pass
+- [ ] writes both integration and unit tests
 
-end
-p divided_array
-p divided_array.sum
+## Version Control - 1
 
-modulo = divided_array.sum
+Notes: Github is still foggy to me.  
 
-if modulo % 10 == 0
+The student(s):
 
-  puts "The number is valid!"
-
-else
-
-  puts "The number is invalid."
-
-end
+- [X] hosts their code on the master branch of their remote repository
+- [ ] makes commits in small chunks of functionality
+- [ ] submits and merges Pull Requests using the Github interface
